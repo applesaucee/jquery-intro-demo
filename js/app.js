@@ -16,11 +16,19 @@ function onReady() {
 	$('nav').slideUp(1000); //in milliseconds; animations
 	$('nav').slideDown();
 	allSections.hide();
+
 	//add attribute of target with value blank to each nav link
 	//allNavLinks.attr('target', '_blank');
 }
 
+$('#exit-button').dblclick(function() {
+	//show the modal
+	$('#confirm-exit-modal').modal();
+});
 
+$('#confirm-exit-button').click(function() {
+	window.location.href = 'http://courses.washington.edu/info343/morris';
+});
 
 allImgs.hover(function() {
 	//console.log($(this));
@@ -44,7 +52,9 @@ allNavLinks.click(function() {
 	
 	//.fade for once. .fadeToggle to go back and forth
 	allSections.hide();
-	$($(this).attr('href')).fadeToggle(1000); //double jquery call to get at a specific section
+	//chaining lets us do multiple calls over and over again. 
+	//.fadeToggle returns the original object you acted upon, which lets continue working on the same item
+	$($(this).attr('href')).fadeToggle(1000).addClass('awesomesauce'); //double jquery call to get at a specific section
 
 });
 
