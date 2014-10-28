@@ -2,6 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
+.awesomesauce {
+    border: 5px solid orange;
+    font-weight: 900;
+}
+
 body {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
